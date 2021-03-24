@@ -1,5 +1,7 @@
 from random import randrange
 from unittest import result
+from Game import Game, my_gestures
+import random
 
 x = input('Please enter your name:')
 print('Hello, ' + x + '. Good luck!')
@@ -21,49 +23,18 @@ print("Spock vaporizes Rock")
 print()
 print()
 
+playerOne_score = int(0)
+computer_score = int(0)
+score_limit = 2
 
-def name_to_number(name):
-    if name == 'rock':
-        return 0
-    elif name == 'Spock':
-        return 1
-    elif name == 'paper':
-        return 2
-    elif name == 'lizard':
-        return 3
-    elif name == 'scissors':
-        return 4
-    else:
-        print("Error name")
+while playerOne_score != score_limit or computer_score != score_limit:
+    playerOne_gesture: str = input("Please enter your gesture:")
+
+    computer_gesture = random.choice(my_gestures)
+    print('The computer chooses:' + random.choice(my_gestures))
 
 
-def number_to_name(number):
-    if number == 0:
-        return 'rock'
-    if number == 1:
-        return 'Spock'
-    if number == 2:
-        return 'paper'
-    if number == 3:
-        return 'lizard'
-    if number == 4:
-        return 'scissors'
-    else:
-        print("Error number")
+if computer_gesture == 'rock' and playerOne_gesture == 'rock':
+    print('Tie!')
 
 
-def rpsls(player_choice):
-    print()
-    print(x + ' chooses ' + player_choice)
-    player_number = name_to_number(player_choice)
-    comp_number = randrange(0, 4)
-    comp_choice = number_to_name(comp_number)
-    print()
-    print('Computer chooses ' + comp_choice)
-    difference = (comp_number - player_number) % 5
-    if difference == 1 or difference == 2:
-        print('Computer Wins!')
-    elif difference == 4 or difference == 3:
-        print(x + ' wins!')
-    elif difference == 0:
-        print(x + ' computer tie!')
