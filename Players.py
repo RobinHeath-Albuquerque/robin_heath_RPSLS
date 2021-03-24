@@ -1,11 +1,12 @@
 
-class Players():
-    def __init__(self):
+class Players:
+    def __init__(self, types):
         self.choice = ''
-        self.gestures = ['Rock', 'Paper','Scissors', 'Lizard', "Spock"]
+        self.types = my_players
+
+my_players = ['human', 'computer']
 
 
-if playerOneChoice == playerTwoChoice:
-    print('This round is a draw.')
-elif playerOneChoice != playerTwoChoice:
-    print('')
+
+
+

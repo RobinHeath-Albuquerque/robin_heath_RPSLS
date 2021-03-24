@@ -10,5 +10,3 @@ class Human(Players):
 playerOne = Human()
 
 playerOne.make_gesture()
-
-
