@@ -5,6 +5,7 @@ import random
 mygestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
 
+
 def make_gesture():
     print.self(random.choice)
 
