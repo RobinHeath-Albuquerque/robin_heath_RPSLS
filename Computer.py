@@ -1,24 +1,15 @@
 from Players import Players
-
 import random
-
-mygestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
-
-
-
-def make_gesture():
-    print.self(random.choice)
+from Game import Game, my_gestures
 
 
 class Computer(Players):
-    pass
+
+    def __init__(self, choice):
+        self.choice = random.choice
+
+    def make_gesture(self):
+        print(self.choice)
 
 
-playerTwo = Computer
-
-playerTwo.make_gesture()
-
-comp_move = random.randint(0,4)
-print("Computer chooses ")
-
-
+computer = Computer
